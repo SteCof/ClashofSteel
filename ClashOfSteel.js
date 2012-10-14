@@ -1,3 +1,5 @@
-alert("Clash Of Steel!");
-var play=confirm("Are you ready to fight?");
+var diagonalCut = new Card({
+  'name': 'Diagonal Cut',
+});
 
+console.log(diagonalCut.getName() + ' is the first card!');
