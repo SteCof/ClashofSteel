@@ -1,3 +1,3 @@
 alert("Clash Of Steel!");
-confirm("Are you ready to fight?");
+var play=confirm("Are you ready to fight?");
 
