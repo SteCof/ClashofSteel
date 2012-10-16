@@ -3,7 +3,7 @@ var Card = function(settings) {
   var resTime = settings.resTime;
   var type = settings.type;
   var image = settings.image;
-  var subtype =settings.subtype;
+  var subtype =settings.su
   this.getName = function() {
     return name;
   }
@@ -24,7 +24,7 @@ var Card = function(settings) {
 	var displayHeadingName = document.createElement('span');
 	var displayResTime = document.createElement('span');
 	displayHeadingName.className="clash-of-steel-heading-name";
-    displayCard.className = "clash-of-steel-"+this.getType();
+    displayCard.className = "clash-of-steel-card";
     displayResTime.className = "clash-of-steel-res-time";
     var displayName = document.createTextNode(this.getName());
 	displayResTime.appendChild(document.createTextNode(" " + this.getResTime()));

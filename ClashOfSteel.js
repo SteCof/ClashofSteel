@@ -19,7 +19,7 @@ var slam= new Card({
 var superLongCardNameCardForSomeReason= new Card({
 	"name": "Super Long Card Name Card For Some Reason",
 	"resTime": "10",
-	"type": "strike",
+	"type": "defence",
 	"image": "http://fc00.deviantart.net/fs70/f/2011/322/9/e/shieldmaiden_sketch_by_doranbladefist-d4gkyug.png",
 	});
 	
