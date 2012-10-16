@@ -22,17 +22,20 @@ var Card = function(settings) {
     displayImg.src = this.getImage();
     var displayHeading = document.createElement('h1');
 	var displayHeadingName = document.createElement('span');
+	var displayTypeLine=document.createElement('h2')
 	var displayResTime = document.createElement('span');
 	displayHeadingName.className="clash-of-steel-heading-name";
     displayCard.className = "clash-of-steel-"+this.getType();
     displayResTime.className = "clash-of-steel-res-time";
     var displayName = document.createTextNode(this.getName());
 	displayResTime.appendChild(document.createTextNode(" " + this.getResTime()));
+	displayTypeLine.appendChild(document.createTextNode(this.getType()));
     displayHeadingName.appendChild(displayName);
 	displayHeading.appendChild(displayHeadingName);
 	displayHeading.appendChild(displayResTime);
     displayCard.appendChild(displayHeading);
     displayCard.appendChild(displayImg);
+	displayCard.appendChild(displayTypeLine);
     document.body.appendChild(displayCard);
   }
   return this;
