@@ -3,7 +3,8 @@ var diagonalCut = new Card({
   "resTime": "8",
   "type": "Strike",
   "image": "http://fc00.deviantart.net/fs70/f/2011/322/9/e/shieldmaiden_sketch_by_doranbladefist-d4gkyug.png",
-});
+  "rules": "Deal 5 damage"
+  });
 
 console.log(diagonalCut.getName() + " is the first card!");
 console.log("Tt's a " + diagonalCut.getType() + " with resolution time " + diagonalCut.getResTime());

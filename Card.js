@@ -3,7 +3,8 @@ var Card = function(settings) {
   var resTime = settings.resTime;
   var type = settings.type;
   var image = settings.image;
-  var subtype =settings.subtype
+  var subtype = settings.subtype;
+  var rules = settings.rules;
   this.getName = function() {
     return name;
   }
@@ -15,6 +16,9 @@ var Card = function(settings) {
   }
   this.getImage = function() {
     return image;
+  }
+  this.getRules =function() {
+	return rules;
   }
   this.display = function() {
     var displayCard = document.createElement('article');
@@ -28,14 +32,17 @@ var Card = function(settings) {
 	var displayResTime = document.createElement('span');
     displayResTime.className = "clash-of-steel-res-time";
 	displayResTime.appendChild(document.createTextNode(" " + this.getResTime()));
-	var displayTypeLine=document.createElement('h2')
+	var displayTypeLine=document.createElement('h2');
 	displayTypeLine.appendChild(document.createTextNode(this.getType()));
+	var displayRulesText=document.createElement('p');
+	displayRulesText.appendChild(document.createTextNode(this.getRules()));
     displayHeadingName.appendChild(displayName);
 	displayHeading.appendChild(displayHeadingName);
 	displayHeading.appendChild(displayResTime);
     displayCard.appendChild(displayHeading);
     displayCard.appendChild(displayImg);
 	displayCard.appendChild(displayTypeLine);
+	displayCard.appendChild(displayRulesText);
     document.body.appendChild(displayCard);
   }
   return this;
