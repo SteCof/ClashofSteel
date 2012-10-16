@@ -18,21 +18,23 @@ var Card = function(settings) {
   }
   this.display = function() {
     var displayCard = document.createElement('article');
+	var displayType=document.createElement('article');
     var displayImg = document.createElement('img');
     displayImg.src = this.getImage();
     var displayHeading = document.createElement('h1');
 	var displayHeadingName = document.createElement('span');
 	var displayResTime = document.createElement('span');
 	displayHeadingName.className="clash-of-steel-heading-name";
-    displayCard.className = "clash-of-steel-"+this.getType();
+    displayType.className = "clash-of-steel-"+this.getType();
     displayResTime.className = "clash-of-steel-res-time";
     var displayName = document.createTextNode(this.getName());
 	displayResTime.appendChild(document.createTextNode(" " + this.getResTime()));
     displayHeadingName.appendChild(displayName);
 	displayHeading.appendChild(displayHeadingName);
 	displayHeading.appendChild(displayResTime);
-    displayCard.appendChild(displayHeading);
-    displayCard.appendChild(displayImg);
+    displayType.appendChild(displayHeading);
+    displayType.appendChild(displayImg);
+	displayCard.appendChild(displayType)
     document.body.appendChild(displayCard);
   }
   return this;
