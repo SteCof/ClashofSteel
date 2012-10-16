@@ -1,8 +1,9 @@
 var Card = function(settings) {
   var name = settings.name;
   var resTime = settings.resTime;
-  var type = settings.type
-  var image = settings.image
+  var type = settings.type;
+  var image = settings.image;
+  var subtype =settings.subtype;
   this.getName = function() {
     return name;
   }
