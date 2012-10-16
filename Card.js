@@ -35,6 +35,7 @@ var Card = function(settings) {
 	var displayTypeLine=document.createElement('h2');
 	displayTypeLine.appendChild(document.createTextNode(this.getType()));
 	var displayRulesText=document.createElement('p');
+	displayRulesText.className="clash-of-steel-rules-text";
 	displayRulesText.appendChild(document.createTextNode(this.getRules()));
     displayHeadingName.appendChild(displayName);
 	displayHeading.appendChild(displayHeadingName);
